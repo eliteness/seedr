@@ -204,8 +204,8 @@ async function confirm() {
 	if(Date.now() < 1680883200e3){notice("<h3>Patience, yung snek 🐍</h3>This SeedR round has not started!<br><br> Go touch some grass 😏");return}
 
 	v_d = Math.floor(v*10**DEC_B)
-	_SEEDR = new ethers.Contract(SEEDR, ["function deposit()"], signer);
-	_tr = await _SEEDR.deposit({value:BigInt(v_d)});
+	_SEEDR = new ethers.Contract(SEEDR, ["function fund() external payable"], signer);
+	_tr = await _SEEDR.fund({value:BigInt(v_d)});
 	notice(`
 		<h3>Submitting Deposit Transction!</h3>
 		Seeding ${v} AVAX.. Please wait for transaction to confirm.<br>
