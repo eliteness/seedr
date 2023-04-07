@@ -227,7 +227,7 @@ button {
 		</div>
 	</div>
 	<br><br><br>
-	<div id="participate" style="display:">
+	<div id="participate" style="display:none">
 		<h3>How much <img class="imgmtv" src="https://ftm.guru/icons/avax.svg" width="20px" style="position:relative;top:4px">AVAX do you wish to allocate?</h3>
 		<div class="slide-container-2">
      	<input type="range" min="1.337" step="1.337" max="1337" value="13.37" class="slider-2" id="in-r" onchange="vals(0)" oninput="this.onchange" onkeyup="this.onchange();" onkeypress="this.onchange();" onpaste="this.onchange();" >
@@ -249,9 +249,10 @@ button {
 		<br><br>
 		<button onclick="confirm()" id="btn-confirm">🚀 Confirm</button>
 	</div>
-	<div id="claims" style="display:none">
+	<div id="claims" style="display:">
 		<h3>This Seed Round has completed.</h3>
-		<button onclick="claim()" id="btn-confirm">Claim Your Allocation</button>
+		Your allocations will be airdropped later this week. Thank you for participating!
+		<!--<button onclick="()" id="btn-confirm"> Your Allocation</button>-->
 	</div>
 	<br><br><br><br>
 	<div id="note" class="overlay">
@@ -340,7 +341,7 @@ SEEDMIN = 1.337;//1e3;
 SEEDMAX = 1337;
 ASSET = "0x0000000000000000000000000000000000000000"	//TOKEN
 BASE = "0xEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"		//CURRENCY
-SEEDR = "0x30089527ca77648aef8878d538333afd494c4259"
+//SEEDR = "0x30089527ca77648aef8878d538333afd494c4259"
 DEC_A = 18;
 DEC_B = 18;
 INITIAL = 10;
