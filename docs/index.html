@@ -1,0 +1,336 @@
+<html>
+<!doctype html><html><meta charset="UTF-8">
+<head>
+<title>SeedR - LGE of veSNEK Wrapper - eliteness.network/seedr</title>
+<meta name="description" content="veSNEK Liquidi Wrapper LGE - eliteness.network/seedr : Multichain Initial Offering, IDO, ICO, IEO, Seed Round & Presale platform">
+<meta name="keywords" content="veSNEK Liquidi Wrapper LGE eliteness.network/seedr : Multichain Initial Offering, IDO, ICO, IEO, Seed Round, Presale">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://ftm.guru/icons/64.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<style>
+/*
+@font-face{font-family:bold;src: url(https://ftm.guru/font/bold.ttf);}
+@font-face{ font-family:italic;src: url(https://ftm.guru/font/italic.ttf);}
+@font-face{ font-family:light;src: url(https://ftm.guru/font/light.ttf);}
+@font-face{ font-family:light_italic;src: url(https://ftm.guru/font/light_italic.ttf);}
+@font-face{ font-family:regular;src: url(https://ftm.guru/font/regular.ttf);}
+@font-face{ font-family:regular_italic;src: url(https://ftm.guru/font/regular_italic.ttf);}
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+html{
+  /*background:url("img/bg7.png");*/
+  /*background:linear-gradient(to top, #ecc052, #03055e);*/
+  background:linear-gradient(315deg,#092e3e -2.82%,#873c24 108.06%);  background-size: 100%;
+background-size: 100%;
+  background-attachment: fixed;
+  color:#fff;
+  /*text-shadow: 2px 2px 2px #000;*/
+}
+* {
+  scroll-behavior: smooth !important;
+  font-family:'Inter', sans-serif;
+  transition: background-size 0.5s;
+}
+#switch {
+  display:none;border:none
+}
+button {
+  background: linear-gradient(to bottom, #0af, #0ff);
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size:1em
+}
+
+#headimg{width:calc(min(90vw,700px))}
+
+.slider-2 {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  width: calc(max(60%,200px));
+  height: 1%;
+  background: linear-gradient(to right, grey 10%, #0ff 30%);
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider-2:hover {
+  opacity: 1;
+  background: linear-gradient(to right, #0ff, #0f7);
+}
+
+.slider-2::-webkit-slider-thumb,.slider-2::-moz-range-thumb {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: url('https://www.solisnek.finance/images/ui/logo_solisnek.png');
+  border-radius: 50%;
+  background-image: url('https://www.solisnek.finance/images/ui/logo_solisnek.png');
+  background-size: 50px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: background-image .2s;
+}
+
+.slider-2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider-2:hover::-webkit-slider-thumb,
+.slider-2:hover::-moz-range-thumb {
+  background-size: 80px;
+  transition: 1s;
+}
+
+#in-n {
+  background: transparent;
+  padding: 8px;
+  border:none;
+  font-weight: bolder;
+  font-size:1em;
+  text-align: center;
+  width: calc(max(20%,100px));
+}
+
+#d-in-n {
+  width: calc(max(30%,200px));
+  background: linear-gradient(to bottom, #0af, #0ff);
+  font-weight: bolder;
+  font-size:1em;
+  border-radius: 100px;
+  padding: 5px;
+  color:#123;
+}
+
+#d-in-n, input, button { text-shadow: none;}
+
+.faq {padding:5%}
+.faq a{color:aqua;text-decoration:none}
+.icons20 img{height: 20px }
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y:  auto;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #192133;
+  color: #fff;
+  border-radius: 20px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #789;
+}
+.popup .close:hover {
+  color: #fff;
+  cursor:  context-menu
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+#social a img {
+  height: 24px;
+  margin:4px 4px 4px 0;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+#content1 a {
+  color: aqua;
+}
+
+#content1 u {
+  text-decoration: dashed underline aqua
+}
+
+
+.stats {display: grid;grid-template-columns: auto}
+.stat div:first-child{font-size: 1.5em}
+.stat {
+  margin: 5%;
+  background:linear-gradient(to bottom, rgba(236,192,82,0) , rgba(3,5,94,0.5));
+  padding:5%;
+  border-radius:10px
+}
+@media(min-width:641px) {
+.stats {display: grid;grid-template-columns: auto auto auto}
+
+
+
+</style>
+<body>
+<div class="body" align="center">
+	<h1 style="font-family:;font-size:2.5em">
+		<img height="48px" style="position: relative;vertical-align: top;" id="" src="https://www.solisnek.finance/images/ui/logo_solisnek.png"> Unnamed veSNEK Liquid Wrapper
+	</h1>
+	<h2><span style="font-family:;color:gold">$</span>Liquidity Generation Event</h2>
+	<div>
+		<span id="cw_m"></span>
+		<div id="connect">
+			Please connect your web3 wallet.
+			<br><br>
+			<button onclick="cw()" id="btn-connect">Connect</button>
+		</div>
+		<div id="switch">
+			<b id="btn-switch" onclick="cw()">
+				<img src="img/wallet.svg" width="24px" style="position:relative;top:4px">
+				<span id="cw"></span>
+			</b>
+			<br>Balance: <b style="font-family:" id="usb-mtv">?</b> <img class="imgmtv" src="https://ftm.guru/icons/avax.svg" width="20px" style="position:relative;top:4px">AVAX<br>
+			<span style="font-size:0.9em">Wallet at <img class="imgmtv" src="https://ftm.guru/icons/avax.svg" width="20px" style="position:relative;top:4px">Avalanche. <a href="index.html" style="color:aqua;font-family:;text-decoration:none">Change?</a></span>
+		</div>
+	</div>
+	<br><br><br>
+	<div id="participate" style="display:">
+		<h3>How much <img class="imgmtv" src="https://ftm.guru/icons/avax.svg" width="20px" style="position:relative;top:4px">AVAX do you wish to allocate?</h3>
+		<div class="slide-container-2">
+     	<input type="range" min="1.337" step="1.337" max="1337" value="13.37" class="slider-2" id="in-r" onchange="vals(0)" oninput="this.onchange" onkeyup="this.onchange();" onkeypress="this.onchange();" onpaste="this.onchange();" >
+		</div>
+		<br>
+		<div id="d-in-n">
+			<input id="in-n"  min="1.337" step="1.337" max="1337" value="13.37" type="number" onchange="vals(1)" oninput="this.onchange" onkeyup="this.onchange();" onkeypress="this.onchange();" onpaste="this.onchange();" list="defaultNumbers">
+			<datalist id="defaultNumbers">
+  			<option value="10"></option>
+  			<option value="25"></option>
+  			<option value="100"></option>
+  			<option value="500"></option>
+  			<option value="1000"></option>
+  			<option value="2000"></option>
+  			<option value="5000"></option>
+			</datalist>
+			<b><img src="https://ftm.guru/icons/avax.svg" width="24px" style="position:relative;top:6px">AVAX</b>
+		</div>
+		<br><br>
+		<button onclick="confirm()" id="btn-confirm">🚀 Confirm</button>
+	</div>
+	<div id="claims" style="display:none">
+		<h3>This Seed Round has completed.</h3>
+		<button onclick="claim()" id="btn-confirm">Claim Your Allocation</button>
+	</div>
+	<br><br><br><br>
+	<div id="note" class="overlay">
+		<div class="popup">
+			<a class="close" href="#">&times;</a>
+			<div class="content" id="content1">
+				w31c0m3 7o 533Dr, fren :)
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div class="stats">
+		<div class="stat">
+			<div id="s_ud">? AVAX</div>
+			<div>Your Deposit</div>
+		</div>
+		<div class="stat">
+			<div id="s_ua">? Tokens</div>
+			<div>Your Allocation</div>
+		</div>
+		<div class="stat">
+			<div id="s_mx">1337 AVAX</div>
+			<div>Max. Per Wallet</div>
+		</div>
+		<div class="stat">
+			<div id="s_mx">1.337 AVAX</div>
+			<div>Min. Per Wallet</div>
+		</div>
+		<div class="stat">
+			<div id="s_tr">? AVAX</div>
+			<div>Total Raised</div>
+		</div>
+		<div class="stat">
+			<div id="s_ta">? Tokens</div>
+			<div>Total Allocated</div>
+		</div>
+		<div class="stat">
+			<div id="s_hc">1337 AVAX</div>
+			<div>Hard Cap</div>
+		</div>
+		<div class="stat">
+			<div id="s_pt">? Sneks</div>
+			<div>Participating</div>
+		</div>
+		<div class="stat">
+			<div id="s_pr">? %</div>
+			<div>Progress</div>
+		</div>
+	</div>
+
+
+
+</div>
+<br><br><br><br>
+<br><br><br><br>
+<div style="color:#ccc;text-shadow:none;text-decoration:none;font-family:">
+	<a href="https://eliteness.network" style="color:#fff;text-shadow:none;text-decoration:none;font-size:1.5em">eliteness.network</a>
+	<br>A Dapp Explorer for Guru Network DAO.
+	<div id="social">
+		<a href="https://twitter.com/ftm1337"><img src="https://ftm.guru/icons/twitter.svg"></a>
+		<a href="https://discord.gg/QpyfMarNrV"><img src="https://ftm.guru/icons/discord.svg"></a>
+		<a href="https://defillama.com/protocol/guru-network"><img src="https://ftm.guru/icons/defillama.svg"></a>
+		<a href="https://defiwars.xyz/projects/guru-network"><img src="https://ftm.guru/icons/defiwars.svg"></a>
+		<a href="https://coinmarketcap.com/currencies/elite-1337"><img src="https://ftm.guru/icons/cmc.svg"></a>
+	</div>
+</div>
+<br><br>
+<div align="right">
+<a href="https://ftm.guru" style="color:#aaa;text-shadow:none;text-decoration:none;font-weight:bolder">Sales powered by Guru Network</a>
+</div>
+</body>
+<script src="https://ftm.guru/ethers-5.2.umd.min.js">
+</script>
+<script src="s2.js?v=2"></script>
+<script>
+CHAINID = 43114;
+RPC_URL = "https://api.avax.network/ext/bc/C/rpc"
+EXPLORE = "https://snowtrace.io/address/";
+SEEDMIN = 1.337;//1e3;
+SEEDMAX = 1337;
+ASSET = "0x0000000000000000000000000000000000000000"	//TOKEN
+BASE = "0xEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"		//CURRENCY
+SEEDR = "0xe1FB1bC7A6d1B067DEfe7F9Ce01Ab4B5C931803F"
+DEC_A = 18;
+DEC_B = 18;
+INITIAL = 10;
+</script>
+</html>
