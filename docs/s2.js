@@ -174,7 +174,7 @@ async function gubs() {
 	$("s_ud").innerHTML = (spr/(10**DEC_B)).toLocaleString() + " AVAX";
 	$("s_ua").innerHTML = (spr/(10**DEC_B)/0.002).toLocaleString() + " Tokens";
 
-	NATIVE = await provider.getBalance(window.ethereum.selectedAddress);
+	_b = await provider.getBalance(window.ethereum.selectedAddress);
 	b=Number(_b)/10**DEC_B;
 	$("usb-mtv").innerHTML=b.toLocaleString();
 	$("in-n").max = Math.min(b,SEEDMAX);
