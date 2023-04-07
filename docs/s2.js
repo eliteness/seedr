@@ -5,6 +5,7 @@ window.addEventListener('load',async function()
 {
 	console.log("waitin for 3 secs..");
 	$("cw_m").innerHTML = "Connecting.. Please wait."
+	arfel()
 	setTimeout(async () => { await basetrip(); /*getao(INITIAL); chkAppr(tokes[1][0]);*/ arf() }, 3000);
 }, false);
 
@@ -187,6 +188,7 @@ async function dr() {
 	$("s_ta").innerHTML = (spr/(10**DEC_B)/0.002).toLocaleString() + " Tokens";
 	$("s_pt").innerHTML = "Unknown Sneks";
 	$("s_pr").innerHTML = ((spr/10**DEC_B)/(1337)*100).toFixed(2) + " %";
+	if(spr/(10**DEC_B) > 1336 ) {notice("<h2>LGE Sold Out!</h2>Thank you for participating! Tokens will be airdropped next week!")}
 }
 function notice(c) {
 	window.location = "#note"
@@ -199,7 +201,7 @@ async function confirm() {
 	//if(v< SEEDMIN){notice("allocation amount too low!"); return}
 	if(v> SEEDMAX){notice("Allocation amount too high!<br><br>Maximum permissible amount is <b>"+SEEDMAX+"</b>"); return}
 	if(v< SEEDMIN){notice("Allocation amount too low!<br><br>Minimum permissible amount is <b>"+SEEDMIN+"</b>"); return}
-	if(Date.now){notice("<h3>Patience, yung snek 🐍</h3>This SeedR round has not started!<br><br> Go touch some grass 😏");return}
+	if(Date.now() < 1680883200e3){notice("<h3>Patience, yung snek 🐍</h3>This SeedR round has not started!<br><br> Go touch some grass 😏");return}
 
 	v_d = Math.floor(v*10**DEC_B)
 	_SEEDR = new ethers.Contract(SEEDR, ["function deposit()"], signer);
@@ -247,5 +249,14 @@ function arf(){
 			c++
 		},
 		500
+	)
+}
+function arfel(){
+	o = INITIAL; c=0;
+	var xfr = setInterval(
+		function(){
+			$("elle").innerHTML = $("elle").innerHTML == "El" ? "Le" : "El"
+		},
+		1337
 	)
 }
