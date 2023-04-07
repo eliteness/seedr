@@ -209,14 +209,14 @@ async function confirm() {
 	notice(`
 		<h3>Submitting Deposit Transction!</h3>
 		Seeding ${v} AVAX.. Please wait for transaction to confirm.<br>
-		<h4><a target="_blank" href="https://ftmscan.com/tx/${_tr.hash}">View on Explorer</a></h4>
+		<h4><a target="_blank" href="https://snowtrace.io/tx/${_tr.hash}">View on Explorer</a></h4>
 	`);
 	await _tr.wait();
 	console.log(_tr)
 	notice(`
 		<h3>Deposit Completed!</h3>
 		<br><br>
-		<h4><a target="_blank" href="https://ftmscan.com/tx/${_tr.hash}">View on Explorer</a></h4>
+		<h4><a target="_blank" href="https://snowtrace.io/tx/${_tr.hash}">View on Explorer</a></h4>
 		<br><br>
 		Check back after the completion of the sale to collect your tokens!
 	`)
