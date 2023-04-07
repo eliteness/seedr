@@ -169,12 +169,12 @@ function fornum2(n,d)
 	return(n_);
 }
 async function gubs() {
-	_S = new ethers.Contract(SEEDR,["function totalFund() public view returns(uint)","function funds(address) public view returns(uint)",],provider);
+	_S = new ethers.Contract(SEEDR,["function totalFund() public view returns(uint)","function funds(address) public view returns(uint)"],provider);
 	spr = await _S.funds(window.ethereum.selectedAddress);
 	$("s_ud").innerHTML = (spr/(10**DEC_B)).toLocaleString() + " AVAX";
 	$("s_ua").innerHTML = (spr/(10**DEC_B)/0.002).toLocaleString() + " Tokens";
 
-	NATIVE = await signer.getBalance(window.ethereum.selectedAddress);
+	NATIVE = await provider.getBalance(window.ethereum.selectedAddress);
 	b=Number(_b)/10**DEC_B;
 	$("usb-mtv").innerHTML=b.toLocaleString();
 	$("in-n").max = Math.min(b,SEEDMAX);
